@@ -1,0 +1,29 @@
+{
+  "name": "repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bruno Barbieri",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.19.3",
+    "@babel/preset-env": "7.19.3",
+    "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.18.6",
+    "@babel/register": "7.5.5",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "lavamoat-browserify": "^15.3.0",
+    "tsify": "5.0.4",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "build:browserify": "browserify index.ts -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ] -p [ tsify --noImplicitAny ]  > browserify.js",
+    "build:lavamoat": "browserify index.ts -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ] -p [ tsify --noImplicitAny ] --plugin [ lavamoat-browserify --autopolicy ] > lavamoat.js"
+  }
+}
