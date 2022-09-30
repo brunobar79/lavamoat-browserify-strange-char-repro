@@ -12,8 +12,8 @@ stack
 
 - clone repo
 - yarn install
-- yarn build:browserify => open browserify.html and react app works fine
-- yarn build:lavamoat => open lavamoat.html and react app crashes
+- yarn build:browserify => open browserify.html in the browser => react app works fine
+- yarn build:lavamoat => open lavamoat.html in the browser => react app crashes
 - open chrome console and see error
 
 http://recordit.co/o6pNMzFHo6
